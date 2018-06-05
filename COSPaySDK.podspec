@@ -12,10 +12,9 @@ Pod::Spec.new do |s|
 
   s.homepage     = "https://github.com/cqmbr/COSPaySDK-iOS.git"
 
-  #s.license      = "MIT"
-	s.license      = { :type => "MIT", :file => "LICENSE" }
+	s.license      = { :type => "Copyright", :text => "LICENSE Copyright 2017 - 2018 cqmbr.net, Inc. All rights reserved." }
 
-  s.author             = {"zhanbin" => "27226850@qq.com" }
+  s.author       = {"zhanbin" => "27226850@qq.com" }
 
   s.platform     = :ios, "8.0"
 
