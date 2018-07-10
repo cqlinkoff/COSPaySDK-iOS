@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handlePayResult:) name:@"COSPayResult" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handlePayResult:) name:@"PayResult" object:nil];
 }
 
 -(void)dealloc {

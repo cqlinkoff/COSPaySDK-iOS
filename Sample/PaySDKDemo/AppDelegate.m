@@ -54,7 +54,7 @@
         // 支付跳转COSPay钱包进行支付，处理支付结果
         [[COSPaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
             NSLog(@"result = %@",resultDic);
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"COSPayResult" object:resultDic];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"PayResult" object:resultDic];
         }];
     }
     return YES;
@@ -67,7 +67,7 @@
         // 支付跳转COSPay钱包进行支付，处理支付结果
         [[COSPaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
             NSLog(@"result = %@",resultDic);
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"COSPayResult" object:resultDic];
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"PayResult" object:resultDic];
         }];
     }
     return YES;
