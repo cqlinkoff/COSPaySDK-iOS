@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import <COSPaySDK/COSPaySDK.h>
-//#import <DCPaySDK/DCPaySDK.h>
 
 @interface AppDelegate ()
 

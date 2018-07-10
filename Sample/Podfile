@@ -6,8 +6,6 @@ target 'PaySDKDemo' do
   	pod 'AFNetworking', '3.0.4'
     pod 'YYCategories', '1.0.4'
     pod 'MBProgressHUD+BWMExtension', '1.0.1'
-    #pod 'COSPaySDK',:path=>'../MBRPaySDK/MBRPaySDK_dev.podspec'
-    #pod 'DCPaySDK',:path=>'../MBRPaySDK/DCPaySDK_dev.podspec'
     pod 'COSPaySDK', '~> 1.0.4'
 
   target 'PaySDKDemoTests' do
