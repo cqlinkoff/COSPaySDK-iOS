@@ -17,7 +17,7 @@ typedef void(^CompletionBlock)(NSDictionary *resultDic);
  *
  *  @return 返回单例对象
  */
-+ (MBRPaySDK *)defaultService;
++ (instancetype)defaultService;
 
 /**
  *  支付接口
