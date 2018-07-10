@@ -124,7 +124,7 @@ PaySDKDemo\Security及下面所有文件
 /**
  *  支付接口
  *
- *  @param orderStr       app支付请求参数字符串，主要包含商户的订单信息，key=value形式，以&连接。
+ *  @param orderStr       支付请求参数字符串，主要包含商户的订单信息，key=value形式，以&连接。
  *  @param schemeStr      商户程序注册的URL protocol，供支付完成后回调商户程序使用。
  */
 - (void)payOrder:(NSString *)orderStr
@@ -141,7 +141,7 @@ orderStr示例如下：
 /**
  *  处理COSPay app支付跳回商户app携带的支付结果Url
  *
- *  @param resultUrl        COSPay客户端回传的url
+ *  @param resultUrl        Pay客户端回传的url
  *  @param completionBlock  处理完支付回调请求，会通过该completionBlock返回支付结果
  */
 - (void)processOrderWithPaymentResult:(NSURL *)resultUrl
