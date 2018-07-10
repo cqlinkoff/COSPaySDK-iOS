@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'PaySDKDemo' do
+  
+  	pod 'AFNetworking', '3.0.4'
+    pod 'YYCategories', '1.0.4'
+    pod 'MBProgressHUD+BWMExtension', '1.0.1'
+    #pod 'COSPaySDK',:path=>'../MBRPaySDK/MBRPaySDK_dev.podspec'
+    #pod 'DCPaySDK',:path=>'../MBRPaySDK/DCPaySDK_dev.podspec'
+    #pod 'COSPaySDK'
+
+  target 'PaySDKDemoTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'PaySDKDemoUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
