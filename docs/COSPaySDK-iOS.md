@@ -12,14 +12,22 @@
   保存并执行pod install,然后用后缀为.xcworkspace的文件打开工程。
 
 #### 选择二：手动导入
+
 把文件COSPaySDK.framework拷贝到项目文件夹下，并导入到项目工程中。
 在Build Phases选项卡的Link Binary With Libraries中，增加以下依赖：
 ![avatar](https://raw.githubusercontent.com/cqmbr/COSPaySDK-iOS/master/docs/images/link_librarys.png)
 
 
-###配置白名单
+### 配置白名单
 sdk会查询cospay是否安装，因此需要在info.plist文件中配置白名单。
 ![avatar](https://raw.githubusercontent.com/cqmbr/COSPaySDK-iOS/master/docs/images/add_scheme.png)
+
+### 配置scheme
+点击项目名称，点击“Info”选项卡，在“URL Types”选项中，点击“+”，在“URL Schemes”中输入“paysdkdemo”。
+![avatar](https://raw.githubusercontent.com/cqmbr/COSPaySDK-iOS/master/docs/images/set_scheme.jpg)
+
+注意：这里的URL Schemes中输入的“paysdkdemo”，为测试demo，参考demo文件“ViewController.m”的NSString *appScheme = @"paysdkdemo"。
+实际商户的app中要填写独立的scheme，建议跟商户的app有一定的标示度，要做到和其他的商户app不重复，否则可能会导致cospay返回的结果无法正确跳回商户app。
 
 ## sdk使用
 ### 组装支付请求
@@ -41,8 +49,8 @@ sdk会查询cospay是否安装，因此需要在info.plist文件中配置白名�
     NSString* orderInfo = [self prepareOrderInfo:orderDic];
     NSLog(@"\rorderInfo:\r%@",orderInfo);
     
-    //应用注册scheme,在COSPaySDKDemo-Info.plist定义URL types
-    NSString *appScheme = @"cospaysdkdemo";
+    //应用注册scheme,在PaySDKDemo-Info.plist定义URL types
+    NSString *appScheme = @"paysdkdemo";
     
     //调用sdk开始支付
     [[COSPaySDK defaultService] payOrder:orderInfo fromScheme:appScheme];
@@ -86,15 +94,16 @@ sdk会查询cospay是否安装，因此需要在info.plist文件中配置白名�
 }
 ```
 
-## 针对Demo的运行注意
-### 关于签名代码问题
+## Demo
+### Demo地址：
+https://github.com/cqmbr/COSPaySDK-iOS.git </br>
+
+### Demo使用说明：
+demo代码位于Sample目录，在Sample目录执行pod update，然后用后缀为.xcworkspace的文件打开工程运行即可。
+
+### 关于Demo中签名代码问题
 PaySDKDemo\Security及下面所有文件
 这些文件是为示例签名所在客户端本地使用。实际场景下请商户把私钥保存在服务端，在服务端进行支付请求参数签名。
-
-### 配置scheme
-点击项目名称，点击“Info”选项卡，在“URL Types”选项中，点击“+”，在“URL Schemes”中输入“paysdkdemo”。“paysdkdemo”来自于文件“ViewController.m”的NSString *appScheme = @"paysdkdemo";。
-注意：这里的URL Schemes中输入的“paysdkdemo”，为测试demo，实际商户的app中要填写独立的scheme，建议跟商户的app有一定的标示度，要做到和其他的商户app不重复，否则可能会导致cospay返回的结果无法正确跳回商户app。
-![avatar](https://raw.githubusercontent.com/cqmbr/COSPaySDK-iOS/master/docs/images/set_scheme.jpg)
 
 
 ## SDK接口
@@ -122,6 +131,11 @@ PaySDKDemo\Security及下面所有文件
 - (void)payOrder:(NSString *)orderStr
       fromScheme:(NSString *)schemeStr;
 ```
+
+
+orderStr示例如下：
+
+"amount=1.0000&attach=api_prepay&coinId=34190899187000&merchantId=10000000000003&orginAmount=0&payBillNo=40476859839485&refBizNo=2000010008&toAddr=0x91f8654587917f3a0c7cfc5fa05bd86dc0162ddb&sign=xCYemw/bby0dKUV6oGuKrbol/YQ2YpEQ1x9jkRz9WkJiI6OacJdYK5si7ZqFZA/kDUA9yywG5Poa3SZMHRjortRO1LdqPrw8l8EA/zToo9QjPghfO5aDaiXJCa8n8OiUUV0h8+N7crOQyKVwcGVuVZ0vMYGINrijIsPV3/u8Pqkk7LGVJgzTfcDUMjQ9HHsfsL3TLXdN32dZ8RmBMS7+OvVheRQqZszq2QyaJ/i+6ufcyMmYGqchydZpsPNAEJhdzUw3gIbSaKzaC+uRDvdyh74BycWZTkWc8iBjgWfcx8YOqoAeX8Z5Mgh6dHPQa/g5CXBAQi9klJNl1fvqjrTIXA=="
 
 ### 处理客户端返回url
 ```objc
