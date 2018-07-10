@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 
 
   s.name         = "COSPaySDK"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "COSPay SDK for iOS."
 
   s.description  = <<-DESC
@@ -20,12 +20,6 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/cqmbr/COSPaySDK-iOS.git", :tag => "#{s.version}" }
 
-  #s.dependency 'SmartCan', '~> 0.5.6' 
-  #s.dependency 'UCSDK', '~> 0.10.26'
-  #s.dependency 'ContentServiceSDK'
-
-		#s.public_header_files = "#{s.name}.framework/Versions/A/**/*.h"
-    #s.source_files = "#{s.name}.framework/Versions/A/**/*.h"
     s.preserve_paths = "*.framework"
     s.vendored_frameworks = "#{s.name}.framework"
 
