@@ -57,12 +57,11 @@ sdk会查询cospay是否安装，因此需要在info.plist文件中配置白名�
 ```
 
 详细可参见Demo中示例文件
-  ● PaySDKDemo\ViewController.h
-  ● PaySDKDemo\ViewController.m
+- PaySDKDemo\ViewController.h
+- PaySDKDemo\ViewController.m
 
 ### 支付回调处理
-配置COSPay客户端返回url处理方法
-（外部存在COSPay钱包，COSPay钱包将处理结果通过url返回。）
+配置COSPay客户端返回url处理方法（外部存在COSPay钱包，COSPay钱包将处理结果通过url返回。）</br> 
 如示例PaySDKDemo\AppDelegate.m文件中，增加引用代码：
 ```objc
 #import <COSPaySDK/COSPaySDK.h>
