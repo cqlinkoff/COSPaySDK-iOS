@@ -23,7 +23,6 @@
 		3CAFEAA920F4BB25002261CC /* DCPRSAHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAFEAA120F4BB25002261CC /* DCPRSAHelper.m */; };
 		3CAFEAAA20F4BB25002261CC /* DCPAPISigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAFEAA320F4BB25002261CC /* DCPAPISigner.m */; };
 		3CAFEAAB20F4BB25002261CC /* partner_rsa_private_key.pem in Resources */ = {isa = PBXBuildFile; fileRef = 3CAFEAA520F4BB25002261CC /* partner_rsa_private_key.pem */; };
-		3CAFEAAD20F4BFC2002261CC /* COSPaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CAFEAAC20F4BFC2002261CC /* COSPaySDK.framework */; };
 		4DD679553517E33A0A3F8491 /* libPods-PaySDKDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 217C8FFC45A4735DA361A09F /* libPods-PaySDKDemo.a */; };
 		50BC3A4425BDCB890BFAF6AD /* libPods-PaySDKDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0444B9201557746A539B80 /* libPods-PaySDKDemoUITests.a */; };
 		EC4A5ADEE974E1545A2A63BA /* libPods-COSPaySDKDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CD4B07194BF5463567B8AA /* libPods-COSPaySDKDemoUITests.a */; };
@@ -76,7 +75,6 @@
 		3CAFEAA220F4BB25002261CC /* DCPAPISigner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPAPISigner.h; sourceTree = "<group>"; };
 		3CAFEAA320F4BB25002261CC /* DCPAPISigner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPAPISigner.m; sourceTree = "<group>"; };
 		3CAFEAA520F4BB25002261CC /* partner_rsa_private_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = partner_rsa_private_key.pem; sourceTree = "<group>"; };
-		3CAFEAAC20F4BFC2002261CC /* COSPaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = COSPaySDK.framework; sourceTree = "<group>"; };
 		3F0444B9201557746A539B80 /* libPods-PaySDKDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PaySDKDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		429E3938AB09A0445B95115A /* Pods-PaySDKDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaySDKDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaySDKDemoTests/Pods-PaySDKDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		456214F48B12B907CDBEAAEB /* Pods-COSPaySDKDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COSPaySDKDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-COSPaySDKDemoUITests/Pods-COSPaySDKDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CAFEAAD20F4BFC2002261CC /* COSPaySDK.framework in Frameworks */,
 				4DD679553517E33A0A3F8491 /* libPods-PaySDKDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,7 +126,6 @@
 		3C9B3D6E20A04821005EF6FF = {
 			isa = PBXGroup;
 			children = (
-				3CAFEAAC20F4BFC2002261CC /* COSPaySDK.framework */,
 				3C9B3D7920A04821005EF6FF /* PaySDKDemo */,
 				3C9B3D9220A04823005EF6FF /* PaySDKDemoTests */,
 				3C9B3D9D20A04823005EF6FF /* PaySDKDemoUITests */,

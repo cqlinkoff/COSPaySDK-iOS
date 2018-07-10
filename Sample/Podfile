@@ -8,7 +8,7 @@ target 'PaySDKDemo' do
     pod 'MBProgressHUD+BWMExtension', '1.0.1'
     #pod 'COSPaySDK',:path=>'../MBRPaySDK/MBRPaySDK_dev.podspec'
     #pod 'DCPaySDK',:path=>'../MBRPaySDK/DCPaySDK_dev.podspec'
-    #pod 'COSPaySDK'
+    pod 'COSPaySDK', '~> 1.0.4'
 
   target 'PaySDKDemoTests' do
     inherit! :search_paths
