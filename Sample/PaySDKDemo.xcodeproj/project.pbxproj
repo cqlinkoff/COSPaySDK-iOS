@@ -645,7 +645,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mbr.PaySDKDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mbr.COSPaySDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -668,7 +668,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mbr.PaySDKDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mbr.COSPaySDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

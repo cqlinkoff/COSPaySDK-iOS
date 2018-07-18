@@ -13,6 +13,10 @@
 #import <YYCategories.h>
 #import <MBProgressHUD+BWMExtension/MBProgressHUD+BWMExtension.h>
 
+static const NSString *urlPath = @"http://47.100.47.200:9927/payIndex/prepay";
+static const NSString *channel = @"73088886094000";
+static const NSString *merchantId = @"10000000000003";
+
 @interface ViewController ()
 
 @end
@@ -45,7 +49,7 @@
 -(void)prePay:(NSString *)coinId amount:(NSString *)amount{
     
     MBProgressHUD *hud = [MBProgressHUD bwm_showHUDAddedTo:self.view title:@"" animated:YES];
-    NSString *urlString = [NSString stringWithFormat:@"http://47.100.47.200:9927/home/prepay?coinId=%@&amount=%@",coinId,amount];
+    NSString *urlString = [NSString stringWithFormat:@"%@?channel=%@&merchantId=%@&coinId=%@&amount=%@",urlPath,channel,merchantId,coinId,amount];
     //NSString *urlString = [NSString stringWithFormat:@"https://api.cospay.io/home/prepay?coinId=%@&amount=%@",coinId,amount];
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -60,8 +64,8 @@
                                                                              options:NSJSONReadingMutableContainers
                                                                                error:&error];
                 if (error==nil) {
-                    NSString *code = responseDict[@"code"];
-                    if ([code isEqualToString:@"200"]) {
+                    NSInteger code = [responseDict[@"code"] integerValue];
+                    if (code == 200) {
                         dispatch_async(dispatch_get_main_queue(), ^{
                             NSString *orderInfo = responseDict[@"data"];
                             NSLog(@"\rorderInfo:\r%@",orderInfo);
