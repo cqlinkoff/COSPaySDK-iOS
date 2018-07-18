@@ -71,7 +71,7 @@ static const NSString *merchantId = @"10000000000003";
                             NSLog(@"\rorderInfo:\r%@",orderInfo);
                             
                             //应用注册scheme,在PaySDKDemo-Info.plist定义URL types
-                            NSString *appScheme = @"PaySDKDemo";
+                            NSString *appScheme = @"COSPaySDKDemo";
                             
                             //调用sdk开始支付
                             [[COSPaySDK defaultService] payOrder:orderInfo fromScheme:appScheme];
@@ -113,7 +113,7 @@ static const NSString *merchantId = @"10000000000003";
     NSLog(@"\rorderInfo:\r%@",orderInfo);
     
     //应用注册scheme,在PaySDKDemo-Info.plist定义URL types
-    NSString *appScheme = @"PaySDKDemo";
+    NSString *appScheme = @"COSPaySDKDemo";
     
     //调用sdk开始支付
     [[COSPaySDK defaultService] payOrder:orderInfo fromScheme:appScheme];
